@@ -1,8 +1,8 @@
-This repo is a minimal repro for a Bazel bug. It shows that providing a Java binary as an executable
-tool through a toolchain breaks Bazel's dependency analysis: changing the tool's source code does
-not rerun actions that use the tool. By contrast, providing the same Java binary as a
-FilesToRunProvider works as expected: changing the tool's source code reruns the actions that use
-the tool.
+This repo is a minimal repro for https://github.com/bazelbuild/bazel/issues/17389. It shows that
+providing a Java binary as an executable tool through a toolchain breaks Bazel's dependency
+analysis: changing the tool's source code does not rerun actions that use the tool. By contrast,
+providing the same Java binary as a FilesToRunProvider works as expected: changing the tool's source
+code reruns the actions that use the tool.
 
 ## Repro steps
 
